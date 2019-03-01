@@ -16,10 +16,10 @@
     "express": "^4.15.2"
   },
   "devDependencies": {
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.1.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.22.0",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "superagent": "^4.0.0-beta.5",
     "supertest": "^3.3.0"
   },
