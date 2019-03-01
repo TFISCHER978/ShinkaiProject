@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '9'
+script:
+- cd nodejs-minimal-boilerplate
+- yarn
+deploy:
+  provider: heroku
+  app: shinkai
+  api_key:
+    secure: pXQCDCETBWajFtiYUVj3ZV5tZ1ItMS3Qb6Pul06xzUBZwFZpNgQP5WRbgE0H4AXgNIs2ThttZ4TjD42uhvJe1mGLERa6vkpYkcGEN3Zso8rlZiHxX3S+elvyx2GPLJDdzYg/FmDsuIiaP0AGCSh2RnKrmrfIuK/JD/eTx0lK2k5KqEM4UwA/jE43mZFwre+tocdWF+Z1WfAka+lo6F0MYB14SM9y/RlAHP1Y6Mr+VDRzzGGE7pRvPUgjRkpSyP8zBDXHXXmLFOOD7xS6cZUig4Qc5v4M34DmW96gaBnVs3c1F4hKDtSsM3m25ANeQFZBV0VHi6IW8pOuUMtHNwbvQ+M28QH8RQ8Ywn8QINNp4CPNnUa7KjpyqrLfBujufyDwPN2UJTxAdhMGYYBOEJI35qshfk5pTaw+BWMwN7eMWq3H1L2ptEFlhcnvvijox4m/BfkaMH/aZFUVZJrz4kB7GSebsZkxXnxCxP/rs45d7GFxjhFeUlyWkrgaBMjcFqj9uuzg5aBHLrdlrnSMCAGi1TSZ+uf0oVlpu1aL7hovSts5RjBG4J95Iwc38evFT3faPmbPARWCGeTrA3BmFNftIqNQIhGWWM6UnvM9i7qKH3qlYIyC6W1EEyG6Z3pMMEDLRtyyV3f91XsGaAnCNtjOh1+q/veV8mnnuw42y7e3k4E=
+after_success:
+- wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+- chmod +x send.sh
+- "./send.sh success $WEBHOOK_URL"
+after_failure:
+- wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+- chmod +x send.sh
+- "./send.sh failure $WEBHOOK_URL"
