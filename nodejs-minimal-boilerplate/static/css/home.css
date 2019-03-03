@@ -1,0 +1,142 @@
+@font-face { 
+  font-family: architxt;
+  src: url(../ressources/architxt.ttf) format("truetype");
+}
+.archiFont { 
+  font-family:  'architxt';
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+.dropdown-menu-center {
+  right: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.dropdown-menu {
+  border: none;
+  background: rgba(0,0,0,0.4);
+  margin-top: 0px;
+}
+
+.dropdown-item {
+  color: white;
+  font-weight: 700;
+}
+
+.navbar {
+  min-height: 80px;
+  background: rgba(0,0,0,0.4);
+}
+
+.nav-item {
+  font-size: 25px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
+
+/* Page center */
+.page-center {
+	height: 100px;
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+/* Responsive Text */
+@media (min-width: 544px) {  
+  .respFont {font-size: 40px;}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+  .respFont {font-size: 48px;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .respFont {font-size: 56px;}
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  .respFont {font-size: 80px;}
+}
+
+h1 {
+  letter-spacing: 20px;
+}
+
+
+/* Background */
+
+.bg {
+  /* The image used */
+  background-image: url("../ressources/background.png");
+
+  /* Half height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
